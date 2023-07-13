@@ -43,6 +43,25 @@ const handleUserInput = function (key) {
     // Moving Right
     connection.write('Move: right');
   }
+
+  // Special canned messages with keys
+  // q: go long | e: snake bite | z: so looong | c: mama mia
+  if (key === 'q') {
+    connection.write('Say: go long');
+  }
+
+  if (key === 'e') {
+    connection.write('Say: snake bite');
+  }
+
+  if (key === 'z') {
+    connection.write('Say: so looong');
+  }
+
+  if (key === 'c') {
+    connection.write('Say: mama mia');
+  }
+
 };
 
 module.exports = { setupInput };
