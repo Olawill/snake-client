@@ -18,7 +18,7 @@ const setupInput = function(conn) {
 };
 
 // data callback handler
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   // check for ctrl + c and terminate the game
   if (key === '\u0003') {
     process.exit(0);

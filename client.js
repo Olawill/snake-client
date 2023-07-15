@@ -16,7 +16,7 @@ const connect = function() {
   });
 
   // handle incoming data
-  conn.on('data', (chunk) => console.log("you ded cus you idled"));
+  conn.on('data', () => console.log("you ded cus you idled"));
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
