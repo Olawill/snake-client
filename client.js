@@ -4,8 +4,8 @@ const { IP, PORT } = require("./constants");
 // establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
-    IP,
-    PORT
+    host: IP,
+    port: PORT
   });
 
   // notify when connection is successful
@@ -26,4 +26,4 @@ const connect = function() {
 };
 
 
-module.exports = { connect };
+module.exports = connect;
