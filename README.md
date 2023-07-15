@@ -10,8 +10,8 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["Game Screen when a Player Connects"](#)
-!["Snake getting Longer as you play"](#)
+!["Game Screen when a Player Connects"](src/connection.png)
+!["Snake getting Longer as you play"](src/playing_messages.png)
 
 
 ## Getting Started
