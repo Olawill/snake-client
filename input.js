@@ -1,3 +1,6 @@
+// IMPORTS
+const { MOVES } = require('./constants');
+
 // Stores the active TCP connection object.
 let connection;
 
@@ -24,42 +27,9 @@ const handleUserInput = function(key) {
     process.exit(0);
   }
 
-  if (key === 'w') {
-    // Moving up
-    connection.write('Move: up');
-  }
-
-  if (key === 'a') {
-    // Moving Left
-    connection.write('Move: left');
-  }
-
-  if (key === 's') {
-    // Moving Down
-    connection.write('Move: down');
-  }
-
-  if (key === 'd') {
-    // Moving Right
-    connection.write('Move: right');
-  }
-
-  // Special canned messages with keys
-  // q: go long | e: snake bite | z: so looong | c: mama mia
-  if (key === 'q') {
-    connection.write('Say: go long');
-  }
-
-  if (key === 'e') {
-    connection.write('Say: snake bite');
-  }
-
-  if (key === 'z') {
-    connection.write('Say: so looong');
-  }
-
-  if (key === 'c') {
-    connection.write('Say: mama mia');
+  // Check for move key and canned messages:
+  if (MOVES[key]) {
+    connection.write(MOVES[key])
   }
 
 };
